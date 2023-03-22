@@ -8,6 +8,7 @@ import pl.coderstwo.employeemanager.service.EmployeeService;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/employee")
 public class EmployeeResource {
@@ -16,6 +17,7 @@ public class EmployeeResource {
     public EmployeeResource(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
+
 
     @GetMapping("/")
     public ResponseEntity<List<Employee>> getAllEmployee(){
